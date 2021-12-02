@@ -1,13 +1,13 @@
-import './SingleCard'
+import './SingleCard.css'
 
-function SingleCard({ card, handleChoice }) {
+function SingleCard({ card, handleChoice, flipped }) {
   const handleCardClick = () => {
     handleChoice(card)
   }
 
   return (
     <div className="card">
-      <div>
+      <div className={flipped ? 'flipped' : ''}>
         <img className="front" src={card.src} alt="card front" />
         <img
           className="back"
